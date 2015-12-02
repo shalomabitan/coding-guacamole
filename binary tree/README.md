@@ -20,4 +20,4 @@ So, how does this fundemental data structure work?
 
 The *binary search tree* (BST) works as follows:
 
-  The tree starts at a single entry point - the *root node* 
+	The tree starts at a single entry point - the *root node* 
