@@ -18,4 +18,6 @@ The Binary tree is a **data structure** (keyword) which allows us to store infor
 ####Ok, how does a Binary Tree work?
 So, how does this fundemental data structure work?
 
-The *binary search tree* (BST)
+The *binary search tree* (BST) works as follows:
+
+  The tree starts at a single entry point - the *root node* 
