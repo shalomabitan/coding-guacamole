@@ -12,5 +12,5 @@ This will be the folder for a Binary Tree in Python
 #changelog
 ***
 
-##0.0.0 (12.01.2015)
+0.0.0 (12.01.2015)
 * added 
