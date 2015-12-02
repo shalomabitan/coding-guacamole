@@ -13,4 +13,4 @@ This will be the folder for a Binary Tree in Python
 ***
 
 0.0.0 (12.01.2015)
-* added 
+* added readme
