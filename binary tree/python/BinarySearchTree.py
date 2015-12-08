@@ -1,5 +1,10 @@
 from Node import *
+from Debugger import *
 
+
+# init the debugger
+debug = Debugger()
+debug.enable()
 
 class BinarySearchTree(object):
     """A Binary Search Tree Implementation:
@@ -12,6 +17,7 @@ class BinarySearchTree(object):
     def __init__(self, name):
         """Create the root node of the BST.
         """
+        debug.printMsg("We Initiated a BST with no root node")
         self.name = name
         self.root = None
         self.size = 0
@@ -38,6 +44,7 @@ class BinarySearchTree(object):
             data into the BST using a log_2(n)
             algorithm
         """
+        debug.printMsg('Insert for "' + key + '" With data: ' + str(data) )
         # if there is no root node
         if not self.root:
             self.root = Node(key, data)

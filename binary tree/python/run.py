@@ -1,11 +1,13 @@
 from BinarySearchTree import *
 from Node import *
 from Debugger import *
+import sys
 
 
-debug = Debugger(True)
+debug = Debugger()
+debug.disable()
 
-debug.debug("hello, joel")
+debug.printMsg("hello, joel")
 bst = BinarySearchTree("Joel")
 
 
