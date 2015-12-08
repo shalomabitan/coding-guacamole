@@ -12,9 +12,11 @@ bst = BinarySearchTree("Joel")
 
 
 
-bst.insert("key", 34)
-bst.insert("key2", 43)
+bst.insert("34", 34)
+bst.insert("43", 43)
+bst.insert("51", 51)
+bst.insert("12", 12)
 
-node = Node("joel", 45)
+res = bst.lookup("43")
 
-print node.isRoot()
+print res.data
