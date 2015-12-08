@@ -47,6 +47,7 @@ class BinarySearchTree(object):
         debug.printMsg('Insert for "' + key + '" With data: ' + str(data) )
         # if there is no root node
         if not self.root:
+            debug.printMsg("No root was found, create one")
             self.root = Node(key, data)
         else:
             self.recursiveInsert(key, data, self.root)
