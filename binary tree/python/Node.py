@@ -19,55 +19,47 @@ class Node(object):
 		self.data = data
 
 	def hasLeftChild(self):
-		"""Checks whether this TreeNode has a leftChild
-		"""
+		"""Checks whether this TreeNode has a leftChild"""
 		return self.left
 
 	def hasRightChild(self):
-		"""Checks whether this TreeNode has a rightChild
-		"""
+		"""Checks whether this TreeNode has a rightChild"""
 		return self.right
 
 	def isLeftChild(self):
-		"""Checks whether this node is a leftChild
-		"""
+		"""Checks whether this node is a leftChild"""
 		return self.parent and self.parent.left == self
 
-    def isRightChild(self):
-    	"""Checks whether this node is a rightChild
-		"""
+	def isRightChild(self):
+		"""Checks whether this node is a rightChild"""
 		return self.parent and self.parent.right == self
 
-    def isRoot(self):
-    	"""checks if this is the root node
-    	"""
-    	return not self.parent
+	def isRoot(self):
+		"""checks if this is the root node Note. 
+		if not attached to anything, it'll be a root of itself"""
+		return not self.parent
 
-    def isLeaf(self):
-    	"""Checks whether this is a leaf (no children)
-    	"""
-    	return not (self.right or self.left)
+	def isLeaf(self):
+		"""Checks whether this is a leaf (no children)"""
+		return not (self.right or self.left)
 
-    def hasAnyChildren(self):
-    	"""Checks whether this is not a leaf
-    	"""
-    	return self.right or self.left
+	def hasAnyChildren(self):
+		"""Checks whether this is not a leaf"""
+		return self.right or self.left
 
-    def isComplete(self):
-    	"""checks is this node is complete
-    	"""
-    	return self.right and self.left
+	def isComplete(self):
+		"""checks is this node is complete"""
+		return self.right and self.left
 
-   	def updateNode(self, key, data, leftNode, rightNode):
-   		"""Updates the node with the appropriate data
-   		"""
-   		self.key = key
-        self.data = data
-        self.left = leftNode
-        self.right = rightNode
-        # if this node has a left child update it
-        if self.hasLeftChild():
-            self.left.parent = self
-        #if this node has right child update parent pointer 
-        if self.hasRightChild():
-            self.right.parent = self
+	def updateNode(self, key, data, leftNode, rightNode):
+		"""Updates the node with the appropriate data"""
+		self.key = key
+		self.data = data
+		self.left = leftNode
+		self.right = rightNode
+	    # if this node has a left child update it
+		if self.hasLeftChild():
+			self.left.parent = self
+		#if this node has right child update parent pointer 
+		if self.hasRightChild():
+			self.right.parent = self
