@@ -29,6 +29,10 @@ class BinarySearchTree(object):
     def __iter__(self):
         return self.root.__iter__()
 
+    def __setitem__(self,k,v):
+        """Allows to override how we insert things"""
+        self.insert(k,v)
+
     def insert(self, key, data):
         """This function will insert 
             data into the BST using a log_2(n)
@@ -38,14 +42,29 @@ class BinarySearchTree(object):
         if not self.root:
             self.root = Node(key, data)
         else:
-            self.recursiveInsert(key,val,self.root)
+            self.recursiveInsert(key, data, self.root)
         # increment the size of the BST
         self.size = self.size + 1
 
-    def recursiveInsert(self, key, value, curr):
+    def recursiveInsert(self, key, data, curr):
         """This is the main algorithm for insert
         """
         # check if the key is greater than current node key
+        # we will go right
         if key > curr.key:
-            print "larger"
+            # now check if there is a right node already
+            if curr.hasRightChild():
+                # well, we're shit out of luck and need to go further
+                self.recursiveInsert(key, data, curr.right)
+            else:
+                # we found an empty spot
+                curr.right = Node(key, data, curr)
+        else:
+             # now check if there is a left node already
+            if curr.hasLeftChild():
+                # well, we're shit out of luck and need to go further
+                self.recursiveInsert(key, data, curr.left)
+            else:
+                # we found an empty spot
+                curr.left = Node(key, data, curr)
 

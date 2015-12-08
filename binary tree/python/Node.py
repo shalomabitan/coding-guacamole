@@ -8,7 +8,7 @@ class Node(object):
 
     """
 
-	def __init__(self, key, data, leftNode = None, rightNode = None, parentNode = None):
+	def __init__(self, key, data, parentNode = None, leftNode = None, rightNode = None):
 		"""The TreeNode takes a key and data pair, in addition
 		   an optional left, right and parent pointer
 		"""
