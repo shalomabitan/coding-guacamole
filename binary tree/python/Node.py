@@ -31,32 +31,32 @@ class Node(object):
 	def isLeftChild(self):
 		"""Checks whether this node is a leftChild
 		"""
-        return self.parent and self.parent.left == self
+		return self.parent and self.parent.left == self
 
     def isRightChild(self):
     	"""Checks whether this node is a rightChild
 		"""
-        return self.parent and self.parent.right == self
+		return self.parent and self.parent.right == self
 
     def isRoot(self):
     	"""checks if this is the root node
     	"""
-        return not self.parent
+    	return not self.parent
 
     def isLeaf(self):
     	"""Checks whether this is a leaf (no children)
     	"""
-        return not (self.right or self.left)
+    	return not (self.right or self.left)
 
     def hasAnyChildren(self):
     	"""Checks whether this is not a leaf
     	"""
-        return self.right or self.left
+    	return self.right or self.left
 
     def isComplete(self):
     	"""checks is this node is complete
     	"""
-        return self.right and self.left
+    	return self.right and self.left
 
    	def updateNode(self, key, data, leftNode, rightNode):
    		"""Updates the node with the appropriate data
