@@ -1,3 +1,6 @@
+from Node import *
+
+
 class BinarySearchTree(object):
     """A Binary Search Tree Implementation:
 
@@ -11,6 +14,7 @@ class BinarySearchTree(object):
         """
         self.name = name
         self.root = None
+        self.size = 0
 
     def length(self):
         """Returns the length of the BST
