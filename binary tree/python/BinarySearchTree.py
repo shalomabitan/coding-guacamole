@@ -114,8 +114,9 @@ class BinarySearchTree(object):
         find the key is there is
         """
         # basically repeat insert
-    
+        debug.printMsg("Entered recursiveLookup")
         # if we found a match break
+        debug.printMsg('Checking base condition: ' + key + '==' + curr.key)
         if key == curr.key:
             return (curr, None)
         # if the key is larger than curr
