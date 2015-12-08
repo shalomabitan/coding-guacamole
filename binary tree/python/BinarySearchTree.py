@@ -91,15 +91,21 @@ class BinarySearchTree(object):
         """Gets a specific key from the BST
         """
         # check that this tree actually has a root node
+        debug.printMsg("Call made to Lookup")
+        debug.printMsg("checking if we have a BST")
         if self.root:
+            debug.printMsg("Calling Recursive Lookup")
             (result, err) = self.recursiveLookup(key, self.root)
             # if we did not find anything
             if err: 
+                debug.printMsg("Oops, we couldn't find anything")
                 return None
             else: 
                 # we found a result
+                debug.printMsg("we found: " + result)
                 return result
         else:
+            debug.printMsg("Oops, the BST seems to not exist")
             # root doesnt exist
             return None
 
