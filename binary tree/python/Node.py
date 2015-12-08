@@ -53,7 +53,7 @@ class Node(object):
     	"""
         return self.right or self.left
 
-    def hasBothChildren(self):
+    def isComplete(self):
     	"""checks is this node is complete
     	"""
         return self.right and self.left
