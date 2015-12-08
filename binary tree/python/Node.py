@@ -26,7 +26,7 @@ class Node(object):
 	def hasRightChild(self):
 		"""Checks whether this TreeNode has a rightChild
 		"""
-		return self.Reft
+		return self.right
 
 	def isLeftChild(self):
 		"""Checks whether this node is a leftChild
