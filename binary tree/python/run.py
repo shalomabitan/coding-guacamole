@@ -10,8 +10,6 @@ debug.disable()
 debug.printMsg("hello, joel")
 bst = BinarySearchTree("Joel")
 
-res = bst.lookup("43")
-
 
 bst.insert("34", 34)
 bst.insert("43", 43)

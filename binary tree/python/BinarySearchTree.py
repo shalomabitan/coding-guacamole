@@ -102,7 +102,7 @@ class BinarySearchTree(object):
                 return None
             else: 
                 # we found a result
-                debug.printMsg("we found: " + result)
+                debug.printMsg("we found: ")
                 return result
         else:
             debug.printMsg("Oops, the BST seems to not exist")
