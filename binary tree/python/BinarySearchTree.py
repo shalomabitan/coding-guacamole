@@ -24,5 +24,21 @@ class BinarySearchTree(object):
 
     def __iter__(self):
         return self.root.__iter__()
-    
 
+    def insert(self, key, data):
+        """This function will insert 
+            data into the BST using a log_2(n)
+            algorithm
+        """
+        # if there is no root node
+        if not self.root:
+            self.root = Node(key, data)
+        else:
+            self.recursiveInsert(key,val,self.root)
+        # increment the size of the BST
+        self.size = self.size + 1
+
+    def recursiveInsert(self, key, value, parent):
+        """This is the main algorithm for insert
+        """
+        pass
