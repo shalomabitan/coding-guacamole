@@ -27,6 +27,14 @@ class BinarySearchTree(object):
         """
         return self.length
 
+    def __contains__(self,key):
+        """overload the *in* operator. credit@interactivepython.org
+        """
+        if self.recursiveLookup(key,self.root):
+            return True
+        else:
+            return False
+
     def __len__(self):
         """internal function returns length
         """
@@ -116,20 +124,32 @@ class BinarySearchTree(object):
         # basically repeat insert
         debug.printMsg("Entered recursiveLookup")
         # if we found a match break
-        debug.printMsg('Checking base condition: ' + key + '==' + curr.key)
+        debug.printMsg('Checking base condition: ' + key + ' = ' + curr.key)
         if key == curr.key:
+            debug.printMsg("Success, found")
             return (curr, None)
         # if the key is larger than curr
         elif key > curr.key:
+            debug.printMsg("Nope, now checking if we should go right")
+            debug.printMsg("yep")
+            debug.printMsg("Check if we still have room to search")
             if curr.hasRightChild():
+                debug.printMsg("Moving further right")
                 # move onto the next node along the search path
                 return self.recursiveLookup(key, curr.right)
             else:
+                debug.printMsg("Nope, ran out of search path. bummer")
                 # hit the end and there was no match
                 return (None, True)
+        else:
+            debug.printMsg("Nope, we're going left") 
+            debug.printMsg("Check if we still have room to search") 
             if curr.hasLeftChild():
+                debug.printMsg("Moving further left")
                 return self.recursiveLookup(key, curr.left)
+
             else:
+                debug.printMsg("Shit balls, we ran out of search path")
                 return (None, True)
 
 
