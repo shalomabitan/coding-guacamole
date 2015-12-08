@@ -42,7 +42,10 @@ class BinarySearchTree(object):
         # increment the size of the BST
         self.size = self.size + 1
 
-    def recursiveInsert(self, key, value, parent):
+    def recursiveInsert(self, key, value, curr):
         """This is the main algorithm for insert
         """
-        pass
+        # check if the key is greater than current node key
+        if key > curr.key:
+            print "larger"
+
